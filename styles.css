@@ -1,0 +1,102 @@
+/* Global Styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #0077be, #00a8e8);
+    color: #ffffff;
+    animation: backgroundMove 10s infinite alternate;
+    overflow-x: hidden;
+}
+
+/* Header Styling */
+header {
+    text-align: center;
+    padding: 20px;
+    background: linear-gradient(to right, #005678, #0089cc);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5em;
+    animation: fadeIn 2s ease-out forwards;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header p {
+    font-size: 1.2em;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Main Translator Box */
+.translator-box, .output-box {
+    margin: 20px auto;
+    max-width: 600px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+    animation: slideUp 1.5s ease-in;
+}
+
+textarea {
+    width: calc(100% - 20px);
+    height: 100px;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    resize: none;
+    background: #ffffff20;
+    color: white;
+    font-size: 1em;
+}
+
+textarea::placeholder {
+    color: #b0d5f0;
+}
+
+button {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1em;
+    font-weight: bold;
+    color: white;
+    background: linear-gradient(to right, #33aaff, #005f99);
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(to right, #005f99, #33aaff);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 10px;
+    background: linear-gradient(to right, #004366, #0066aa);
+    color: white;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes backgroundMove {
+    0% { background-position: 0% 0%; }
+    100% { background-position: 100% 100%; }
+}
