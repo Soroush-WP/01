@@ -3,14 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Machine Code Translator-Soroush-Osouli</title>
+    <title>Dynamic Theme Changer</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Machine Code Translator-Soroush</h1>
-        <p>Translate between English and Machine Code (Binary) with styles!</p>
+    <!-- Header -->
+    <header id="mainHeader">
+        <h1 id="headerTitle">Dynamic Translator</h1>
+        <p id="headerSubtitle">Your one-stop translator between English and Machine Code!</p>
     </header>
+
+    <!-- Main Content -->
     <main>
         <div class="translator-box">
             <textarea id="inputText" placeholder="Type your text here (English only)"></textarea>
@@ -22,9 +25,23 @@
             <button id="copyToClipboard">Copy to Clipboard</button>
         </div>
     </main>
-    <footer>
-        <p>&copy; 2025 Oceanic Translator</p>
+
+    <!-- Footer -->
+    <footer id="mainFooter">
+        <p>&copy; 2025 Dynamic Translator. All rights reserved.</p>
     </footer>
+
+    <!-- Theme Switcher -->
+    <div class="theme-switcher">
+        <button id="themeButton">⚙</button>
+        <div class="theme-modal" id="themeModal">
+            <h3>Enter Theme Code</h3>
+            <input type="text" id="themeCodeInput" placeholder="Enter theme code here">
+            <button id="applyThemeButton">Apply Theme</button>
+            <p id="themeMessage"></p>
+        </div>
+    </div>
+
     <script src="scripts.js"></script>
 </body>
 </html>

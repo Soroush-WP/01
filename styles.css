@@ -4,8 +4,8 @@ body {
     font-family: 'Arial', sans-serif;
     background: linear-gradient(to bottom, #0077be, #00a8e8);
     color: #ffffff;
-    animation: backgroundMove 10s infinite alternate;
     overflow-x: hidden;
+    transition: all 0.5s ease-in-out;
 }
 
 /* Header Styling */
@@ -15,20 +15,20 @@ header {
     background: linear-gradient(to right, #005678, #0089cc);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     color: white;
+    transition: all 0.5s ease-in-out;
 }
 
 header h1 {
     font-size: 2.5em;
+    font-family: 'Georgia', serif;
     animation: fadeIn 2s ease-out forwards;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
 header p {
     font-size: 1.2em;
-    font-family: Arial, Helvetica, sans-serif;
 }
 
-/* Main Translator Box */
+/* Translator Box */
 .translator-box, .output-box {
     margin: 20px auto;
     max-width: 600px;
@@ -38,6 +38,7 @@ header p {
     border-radius: 15px;
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
     animation: slideUp 1.5s ease-in;
+    transition: all 0.5s ease-in-out;
 }
 
 textarea {
@@ -57,6 +58,7 @@ textarea::placeholder {
     color: #b0d5f0;
 }
 
+/* Button Styles */
 button {
     padding: 10px 20px;
     margin: 5px;
@@ -83,20 +85,90 @@ footer {
     padding: 10px;
     background: linear-gradient(to right, #004366, #0066aa);
     color: white;
+    transition: all 0.5s ease-in-out;
 }
 
-/* Animations */
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-20px); }
-    to { opacity: 1; transform: translateY(0); }
+/* Theme Switcher Button */
+.theme-switcher {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    z-index: 1000;
 }
 
-@keyframes slideUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to { opacity: 1; transform: translateY(0); }
+#themeButton {
+    width: 40px;
+    height: 40px;
+    border: none;
+    border-radius: 10px;
+    background: linear-gradient(to right, #ff6600, #ff9900);
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: all 0.3s;
 }
 
-@keyframes backgroundMove {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 100%; }
+#themeButton:hover {
+    background: linear-gradient(to right, #ff9900, #ff6600);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+/* Theme Modal Styling */
+.theme-modal {
+    display: none;
+    position: fixed;
+    bottom: 60px;
+    right: 10px;
+    padding: 20px;
+    width: 250px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 15px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+    animation: fadeIn 0.5s ease-out;
+}
+
+/* Hacker Theme */
+body.hacker {
+    background: linear-gradient(to bottom, #000000, #0f0f0f);
+    color: #00ff00;
+    font-family: 'Courier New', monospace;
+}
+
+header.hacker {
+    background: linear-gradient(to right, #003300, #009900);
+    color: #00ff00;
+}
+
+footer.hacker {
+    background: linear-gradient(to right, #002200, #004400);
+    color: #00ff00;
+}
+
+.translator-box.hacker, .output-box.hacker {
+    background: rgba(0, 255, 0, 0.1);
+    box-shadow: 0 8px 15px rgba(0, 255, 0, 0.4);
+}
+
+button.hacker {
+    background: linear-gradient(to right, #006600, #00ff00);
+    box-shadow: 0 4px 10px rgba(0, 255, 0, 0.3);
+    color: black;
+}
+
+button.hacker:hover {
+    background: linear-gradient(to right, #00ff00, #006600);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 255, 0, 0.5);
+}
+
+textarea.hacker {
+    background: #003300;
+    color: #00ff00;
+}
+
+textarea.hacker::placeholder {
+    color: #00aa00;
 }
